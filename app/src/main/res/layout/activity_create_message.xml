@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:orientation="vertical"
-    tools:context=".CreateMessageActivity">
+    android:padding="16dp">
 
+    <!-- ListView para mostrar el historial de mensajes -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Campo de texto para escribir el mensaje -->
     <EditText
         android:id="@+id/message"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="@string/hint"
-        android:ems="10" />
+        android:hint="Escribe un mensaje" />
 
+    <!-- Botón para enviar el mensaje -->
     <Button
         android:id="@+id/send"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:onClick="onSendMessage"
-        android:text="@string/send" />
+        android:text="Enviar"
+        android:onClick="onSendMessage" />
 
 </LinearLayout>
